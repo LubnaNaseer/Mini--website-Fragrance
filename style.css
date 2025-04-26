@@ -1,0 +1,118 @@
+
+  *{ margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+    color: #333;
+}
+/* nav bar style */
+.navbar{
+    background-color:palevioletred;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky; 
+    top: 0px;
+     z-index: 5; 
+}
+.logo{
+  color: white;
+  margin-right: 20px;
+}
+.nav-link{
+    list-style: none;
+    display: flex;
+}
+.nav-link li{
+   margin-right: 50px; 
+}
+.nav-link a{
+    text-decoration: none;
+    color:white ;   
+}
+ .nav-link a:hover{
+    border-bottom: 5px ridge aqua;
+    color: aqua;
+    font-weight: bolder;
+}
+.menu-icon{
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: whitesmoke;
+}
+#menu-toggle{
+    display: none;
+}
+/* header ka code  */
+header{
+    /* background-color: black; */
+     background :url(./download\ \(1\).jpg) center/cover no-repeat; 
+    padding: 90px 20px;
+    color: rgb(8, 8, 8);
+   text-align: center;
+   position: relative;
+   /* z-index: 1; */
+} 
+header h1,p{
+    position: relative;
+      z-index: 1;  
+}
+section{
+    padding: 16px 20px;
+    max-width:1000px ;
+    margin: auto;
+}
+h2{
+    margin-bottom: 20px;
+    color:black;
+}
+.servies{
+    display: flex;
+     flex-wrap: wrap; 
+     /* max-height: 20px; */
+    gap: 20px;
+    justify-content: center;
+}
+.card{
+    background-color:#dddd;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 10px 6px 5px violet;
+
+}
+.card:hover{
+    background-color: grey;
+    cursor: pointer;
+}
+
+
+/* nav bar ki media qure ha */
+@media (max-width: 786px){
+    .nav-link{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: palevioletred;
+        width: 100%;
+        padding: 20px;
+    }
+ #menu-toggle:checked + .menu-icon + .nav-link{
+   display: flex;
+    }
+.nav-link li{
+    margin-bottom: 20px ;
+    text-transform: uppercase;
+  }
+.menu-icon{
+    display: block;  
+    color: white;
+  }
+
+} 
